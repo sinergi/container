@@ -1,7 +1,7 @@
 <?php
-namespace Sinergi\Registry\Tests;
+namespace Sinergi\Container\Tests;
 
-use Sinergi\Registry\ApplicationInterface;
+use Sinergi\Container\ApplicationInterface;
 
 class MockApplication implements ApplicationInterface
 {

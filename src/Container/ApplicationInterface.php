@@ -1,5 +1,5 @@
 <?php
-namespace Sinergi\Registry;
+namespace Sinergi\Container;
 
 interface ApplicationInterface
 {

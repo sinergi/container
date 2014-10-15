@@ -1,8 +1,8 @@
 <?php
-namespace Sinergi\Registry\Tests;
+namespace Sinergi\Container\Tests;
 
 use PHPUnit_Framework_TestCase;
-use Sinergi\Registry\Application;
+use Sinergi\Container\Application;
 
 class ApplicationTest extends PHPUnit_Framework_TestCase
 {

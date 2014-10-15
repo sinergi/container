@@ -8,8 +8,8 @@
          stopOnFailure="false"
          syntaxCheck="false">
     <testsuites>
-        <testsuite name="Sinergi Registry Test Suite">
-            <directory>./tests/Registry/</directory>
+        <testsuite name="Sinergi Container Test Suite">
+            <directory>./tests/Container/</directory>
         </testsuite>
     </testsuites>
 </phpunit>

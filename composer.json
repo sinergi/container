@@ -1,9 +1,9 @@
 {
-    "name": "sinergi/registry",
+    "name": "sinergi/container",
     "type": "library",
-    "description": "PHP Dependency Injection helper that is object oriented and IDE friendly",
-    "keywords": ["Dependency", "Injection", "Container", "Registry"],
-    "homepage": "https://github.com/sinergi/registry",
+    "description": "PHP Dependency Injection container that is object oriented and IDE friendly",
+    "keywords": ["Dependency", "Injection", "Container"],
+    "homepage": "https://github.com/sinergi/container",
     "license": "MIT",
     "authors": [
         {
@@ -12,19 +12,19 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0"
+        "php": "~5.4"
     },
     "require-dev": {
         "phpunit/phpunit": "~4"
     },
     "autoload": {
         "psr-4": {
-            "Sinergi\\Registry\\": "src/Registry"
+            "Sinergi\\Container\\": "src/Container"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Sinergi\\Registry\\Tests\\": ["tests/Registry/Tests", "tests/Registry/Tests/_includes"]
+            "Sinergi\\Container\\Tests\\": ["tests/Container/Tests", "tests/Container/Tests/_includes"]
         }
     }
 }

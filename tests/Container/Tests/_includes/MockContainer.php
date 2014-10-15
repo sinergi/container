@@ -1,8 +1,8 @@
 <?php
 namespace Sinergi\Container\Tests;
 
-use Sinergi\Container\ContainerInterface;
+use Sinergi\Container\AbstractContainer;
 
-class MockContainer implements ContainerInterface
+class MockContainer extends AbstractContainer
 {
 }

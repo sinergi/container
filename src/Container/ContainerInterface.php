@@ -1,7 +1,13 @@
 <?php
 namespace Sinergi\Container;
 
-interface ContainerInterface
-{
+use Countable;
+use IteratorAggregate;
+use JsonSerializable;
+use ArrayAccess;
 
+interface ContainerInterface extends Countable, IteratorAggregate, ArrayAccess, JsonSerializable
+{
+    public function get($key, $default = null);
+    public function set($key, $value);
 }

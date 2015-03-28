@@ -1,4 +1,5 @@
 <?php
+
 namespace Sinergi\Container;
 
 use ArrayIterator;

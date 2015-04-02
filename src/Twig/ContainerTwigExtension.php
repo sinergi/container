@@ -27,11 +27,21 @@ class ContainerTwigExtension extends Twig_Extension
     {
         $globals = [];
         foreach (get_class_methods($this->container) as $method) {
+
             if (substr($method, 0, 3) === 'get') {
                 $function = substr(strtolower($method), 3);
-                $globals[$function] = new ContainerTwigGlobal($method, $this->container);
+                $globals[$function] = new ContainerTwigGlobal($method,
+                    $this->container);
+            } else {
+                if (substr($method, 0, 2) === 'is') {
+                    $function = substr(strtolower($method), 2);
+
+                    $globals[$function] = new ContainerTwigGlobal($method,
+                        $this->container);
+                }
             }
         }
+
         return $globals;
     }
 

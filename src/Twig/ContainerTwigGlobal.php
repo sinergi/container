@@ -17,7 +17,7 @@ class ContainerTwigGlobal
     private $container;
 
     /**
-     * @param string $service
+     * @param string             $service
      * @param ContainerInterface $container
      */
     public function __construct($service, ContainerInterface $container)
@@ -28,13 +28,19 @@ class ContainerTwigGlobal
 
     /**
      * @param string $name
-     * @param array $arguments
+     * @param array  $arguments
+     *
      * @return mixed
      */
     public function __call($name, array $arguments)
     {
         $service = call_user_func([$this->container, $this->service]);
-        return call_user_func_array([$service, $name], $arguments);
+
+        if (is_callable([$service, $name])) {
+            return call_user_func_array([$service, $name], $arguments);
+        }
+
+        return null;
     }
 
     /**
@@ -42,10 +48,6 @@ class ContainerTwigGlobal
      */
     public function __toString()
     {
-        $object = call_user_func([$this->container, $this->service]);
-        if (is_object($object)) {
-            return (string)$object;
-        }
-        return null;
+        return (string)call_user_func([$this->container, $this->service]);
     }
 }
